@@ -12,7 +12,7 @@ public class SplitterTest {
 
     @Test
     public void testSplit() {
-        Splitter splitter = new Splitter(new MockJoiner(), new FuzzySearcher(testDictionary()), "പെരുവഴിയോരത്തൂടെയായി");
+        Splitter splitter = new Splitter(new MockJoiner(), new WordSearcher(testDictionary()), "പെരുവഴിയോരത്തൂടെയായി");
         List<String> output = splitter.split();
         assertEquals(output.size(), 5);
         assertEquals(output.get(0), "പെരു");
